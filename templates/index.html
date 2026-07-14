@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EduGenie AI Learning Assistant</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>🎓 EduGenie AI Learning Assistant</h1>
+
+<p>Your AI-powered educational companion</p>
+
+
+<label>Select Learning Task</label>
+
+
+<select id="task">
+
+<option value="qa">
+💡 Question Answering
+</option>
+
+<option value="explain">
+📖 Concept Explanation
+</option>
+
+<option value="quiz">
+📝 Quiz Generation
+</option>
+
+<option value="summarize">
+📄 Summarization
+</option>
+
+<option value="learn/recommendations">
+🚀 Learning Roadmap
+</option>
+
+</select>
+
+
+
+<textarea
+id="inputText"
+placeholder="Enter your question, topic or text here..."
+rows="8">
+</textarea>
+
+
+
+<button onclick="runTask()">
+Generate Response
+</button>
+
+
+
+<h2>AI Response</h2>
+
+
+<div id="result">
+
+Your answer will appear here...
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+
+async function runTask(){
+
+
+const task=document.getElementById("task").value;
+
+const text=document.getElementById("inputText").value;
+
+
+if(text.trim()==""){
+
+document.getElementById("result").innerHTML=
+"⚠️ Please enter some text.";
+
+return;
+
+}
+
+
+
+document.getElementById("result").innerHTML=
+"⏳ EduGenie is thinking...";
+
+
+
+let body={};
+
+
+
+if(task==="qa"){
+
+body.question=text;
+
+}
+
+else if(task==="summarize"){
+
+body.text=text;
+
+}
+
+else{
+
+body.topic=text;
+
+}
+
+
+
+try{
+
+
+const response=await fetch("/"+task,{
+
+method:"POST",
+
+headers:{
+
+"Content-Type":"application/json"
+
+},
+
+body:JSON.stringify(body)
+
+});
+
+
+
+const data=await response.json();
+
+
+
+if(data.status==="error"){
+
+document.getElementById("result").innerHTML=
+"❌ "+data.message;
+
+}
+
+else{
+
+document.getElementById("result").innerText=
+data.answer;
+
+}
+
+
+
+}
+
+catch(error){
+
+
+document.getElementById("result").innerHTML=
+"❌ Server error. Please try again.";
+
+}
+
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
