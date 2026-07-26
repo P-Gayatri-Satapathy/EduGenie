@@ -261,11 +261,50 @@ EduGenie was tested locally to verify the functionality of different AI modules.
 <img width="1920" height="1080" alt="Concept Explanation" src="https://github.com/user-attachments/assets/dc00eef9-c841-4852-9fec-5dc97dd03866" />
 
 
+<img width="1806" height="998" alt="Screenshot 2026-07-26 202345" src="https://github.com/user-attachments/assets/cd29b798-bdb8-47e0-9283-400d5c5b7ed1" />
+
+
+<img width="1822" height="997" alt="Screenshot 2026-07-26 202357" src="https://github.com/user-attachments/assets/c7df1fd1-b429-4850-a274-ebfb976f96cc" />
+
+
 ## Quiz Generation Output
 
 <img width="1920" height="1080" alt="Quiz Generation" src="https://github.com/user-attachments/assets/693a1f8c-9945-41fc-b11a-8e64998f3655" />
 
+
+## Summarization
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-25 104145" src="https://github.com/user-attachments/assets/31e4aa5d-faff-4c2b-819f-778bfe7f8350" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-25 104206" src="https://github.com/user-attachments/assets/be98d38a-d1f2-4054-91a1-6066c4265d8b" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-25 104216" src="https://github.com/user-attachments/assets/a1a4192d-615f-4732-b3a5-3b5eb9a781e2" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-25 104238" src="https://github.com/user-attachments/assets/566cb65b-2354-4ce6-9b76-591291443814" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-25 104251" src="https://github.com/user-attachments/assets/bf19c067-a81f-4b21-9f66-96ca539fce97" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-25 223024" src="https://github.com/user-attachments/assets/40aaf081-396d-4770-a8ae-f71ccd23718b" />
+
+
+
+## Learning Path Recomendation
+<img width="1920" height="1080" alt="Screenshot 2026-07-25 223106" src="https://github.com/user-attachments/assets/29b83c6f-d35a-4990-bf49-7949f8d2ab00" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-25 223116" src="https://github.com/user-attachments/assets/4b163558-ede2-4022-8884-ccaaf803de14" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-25 223125" src="https://github.com/user-attachments/assets/ff3398af-a3b3-4235-8786-a0eaa6e61583" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-25 223134" src="https://github.com/user-attachments/assets/1c2c3e76-fd19-41fc-be40-3a5a7594d5ba" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-07-25 223141" src="https://github.com/user-attachments/assets/3b7347f0-f56e-4892-b520-60a5341dae16" />
+
 ---
+
+# 📸 Project Demo Video
+
+
+
 
 # 📚 Future Enhancements
 
