@@ -301,11 +301,6 @@ EduGenie was tested locally to verify the functionality of different AI modules.
 
 ---
 
-# 📸 Project Demo Video
-
-
-
-
 # 📚 Future Enhancements
 
 - LaMini-Flan-T5 complete integration.
