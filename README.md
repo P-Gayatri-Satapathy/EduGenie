@@ -2,20 +2,21 @@
 
 ## 📌 Project Overview
 
-EduGenie is an AI-powered educational assistant developed using FastAPI and Google Gemini API. The application provides personalized learning support by answering questions, explaining concepts, generating quizzes, summarizing educational content, and recommending learning paths based on the user's input.
+EduGenie is an AI-powered personalized learning assistant developed using FastAPI and Generative AI technologies. The application provides intelligent learning support through question answering, concept explanation, quiz generation, text summarization, and personalized learning recommendations.
 
-The project demonstrates how Generative AI can be integrated into educational applications to improve learning experiences through intelligent and interactive assistance.
+The project integrates Google Gemini API to generate educational responses and demonstrates how Generative AI can be used in educational applications to improve student learning experiences through interactive assistance.
 
 ---
 
 # 🎯 Project Objectives
 
 - Build an AI-powered educational assistant.
-- Integrate Google Gemini API with FastAPI.
+- Integrate Generative AI with FastAPI.
 - Provide personalized educational support.
 - Generate quizzes automatically.
-- Summarize long educational content.
-- Recommend learning roadmaps for students.
+- Explain complex concepts in simple language.
+- Summarize educational content.
+- Recommend personalized learning paths.
 - Create a simple and interactive web interface.
 
 ---
@@ -24,37 +25,39 @@ The project demonstrates how Generative AI can be integrated into educational ap
 
 ## 1. Question Answering
 
-Provides accurate answers to educational questions using Google Gemini AI.
+Provides answers to educational questions using Generative AI.
 
 ## 2. Concept Explanation
 
-Explains difficult topics in simple language with clear understanding.
+Explains difficult topics in simple and understandable language.
 
 ## 3. Quiz Generation
 
-Automatically creates multiple-choice questions based on a selected topic.
+Automatically generates multiple-choice questions based on user-selected topics.
 
 ## 4. Text Summarization
 
-Converts lengthy educational content into short and easy-to-read summaries.
+Converts lengthy educational content into short and meaningful summaries.
 
 ## 5. Learning Recommendations
 
-Generates personalized learning roadmaps including beginner, intermediate, and advanced study resources.
+Generates personalized learning roadmaps with beginner, intermediate, and advanced learning paths.
 
 ---
 
 # 🛠 Technologies Used
 
-- Python 3.13
+- Python 3.x
 - FastAPI
 - Google Gemini API
+- LaMini-Flan-T5 (Planned Integration)
 - HTML5
 - CSS3
 - JavaScript
 - Jinja2 Templates
 - Python Dotenv
 - Uvicorn
+- Prompt Engineering
 
 ---
 
@@ -84,7 +87,7 @@ EduGenie/
 
 # ⚙ Installation
 
-## Clone the Repository
+## Clone Repository
 
 ```bash
 git clone <repository-url>
@@ -104,7 +107,7 @@ pip install -r requirements.txt
 
 ## Create Environment File
 
-Create `.env` file:
+Create a `.env` file:
 
 ```env
 GEMINI_API_KEY=YOUR_API_KEY
@@ -143,60 +146,82 @@ http://127.0.0.1:8000
 2. FastAPI receives the request.
 3. Input validation is performed.
 4. The required AI module is selected.
-5. A structured prompt is sent to Google Gemini API.
-6. Gemini generates the educational response.
-7. FastAPI returns the response.
-8. The result is displayed on the web interface.
+5. Structured prompts are generated using prompt engineering techniques.
+6. The request is processed using Generative AI models.
+7. AI generates the educational response.
+8. FastAPI returns the response.
+9. The result is displayed through the web interface.
 
 ---
 
 # 🏗️ AI Workflow / Architecture
 
 ```
-                User
-                  |
-                  |
+                 User
+                   |
+                   |
         Educational Input
-                  |
-                  v
-          FastAPI Backend
-                  |
-                  |
+                   |
+                   v
+           FastAPI Backend
+                   |
+                   |
           Request Processing
-                  |
-                  v
-        AI Module Selection
-                  |
-    --------------------------------
-    |        |        |      |      |
-    v        v        v      v      v
+                   |
+                   v
+          AI Module Selection
+                   |
+   --------------------------------
+   |        |        |      |      |
+   v        v        v      v      v
 
-   Q&A  Explanation  Quiz  Summary  Learning
- Module   Module    Module Module  Path Module
+  Q&A  Explanation  Quiz  Summary  Learning
+Module   Module   Module Module   Path Module
 
-                  |
-                  v
+                   |
+                   v
+
+          Prompt Engineering
+
+                   |
+                   v
 
           Google Gemini API
 
-                  |
-                  v
+                   |
+                   v
 
         AI Generated Response
 
-                  |
-                  v
+                   |
+                   v
 
           Web Interface Display
 ```
 
-The system processes user requests through FastAPI, selects the required educational module, sends a structured prompt to Google Gemini, and displays the generated response to the student.
+EduGenie processes user requests through FastAPI, selects the required educational module, applies structured prompts, communicates with the Generative AI model, and displays the generated response.
+
+---
+
+# 🧠 Prompt Engineering
+
+EduGenie uses structured prompt engineering techniques to improve AI response quality.
+
+Techniques used:
+
+- Clear instruction-based prompts.
+- Context-aware educational prompts.
+- Topic-specific prompts.
+- Structured response formatting.
+- Learning-level based recommendations.
+
+Prompt engineering helps generate accurate, relevant, and student-friendly responses.
 
 ---
 
 # 🧪 Testing & Validation
 
-EduGenie was tested locally to verify the functionality of all AI modules.
+EduGenie was tested locally to verify the functionality of different AI modules.
 
 ## Test Cases
 
@@ -211,77 +236,103 @@ EduGenie was tested locally to verify the functionality of all AI modules.
 ## Validation
 
 - API endpoints were tested successfully.
-- User inputs were validated before processing.
-- AI responses were formatted for better readability.
+- User inputs were validated.
+- AI responses were formatted properly.
 - Application was successfully executed on a local server.
 
 ---
 
 # 📸 Screenshots
 
-screenshots of:
+## Home Page
 
-- Home Page
-<img width="1920" height="1080" alt="Screenshot 2026-07-15 204955" src="https://github.com/user-attachments/assets/c03d88b0-38c4-4b3b-ba75-ead152c87efb" />
-
+<img width="1920" height="1080" alt="Home Page" src="https://github.com/user-attachments/assets/c03d88b0-38c4-4b3b-ba75-ead152c87efb" />
 
 
+## Question Answering Output
+
+<img width="1920" height="1080" alt="Question Answering" src="https://github.com/user-attachments/assets/11baadf0-c3ad-493c-8c74-f50ed4fe0207" />
+
+<img width="1920" height="1080" alt="Question Answering Output" src="https://github.com/user-attachments/assets/62031e00-d9ea-4ef1-b836-d7013f08ff0c" />
 
 
-- Question Answering Output
+## Concept Explanation Output
 
-<img width="1920" height="1080" alt="Screenshot 2026-07-15 201139" src="https://github.com/user-attachments/assets/11baadf0-c3ad-493c-8c74-f50ed4fe0207" />
-
-<img width="1920" height="1080" alt="Screenshot 2026-07-15 201152" src="https://github.com/user-attachments/assets/62031e00-d9ea-4ef1-b836-d7013f08ff0c" />
-
-<img width="1920" height="1080" alt="Screenshot 2026-07-15 201206" src="https://github.com/user-attachments/assets/697a100d-8389-4e6f-b89a-96ab61104730" />
+<img width="1920" height="1080" alt="Concept Explanation" src="https://github.com/user-attachments/assets/dc00eef9-c841-4852-9fec-5dc97dd03866" />
 
 
+## Quiz Generation Output
 
-
-
-
-
-- Concept Explanation Output
-
-<img width="1920" height="1080" alt="Screenshot 2026-07-15 202118" src="https://github.com/user-attachments/assets/dc00eef9-c841-4852-9fec-5dc97dd03866" />
-
-<img width="1920" height="1080" alt="Screenshot 2026-07-15 202129" src="https://github.com/user-attachments/assets/0a51dd69-0c0f-4cff-bcc8-cecf0a1db82f" />
-
-<img width="1920" height="1080" alt="Screenshot 2026-07-15 202147" src="https://github.com/user-attachments/assets/5e6ee085-296b-4847-b7c6-ddf8a5a57a6f" />
-
-<img width="1920" height="1080" alt="Screenshot 2026-07-15 202155" src="https://github.com/user-attachments/assets/4e6df37d-deb3-490b-afb0-c6c2210c6520" />
-
-
-
-
-
-
-
-- Quiz Generation Output
-
-<img width="1920" height="1080" alt="Screenshot 2026-07-15 202537" src="https://github.com/user-attachments/assets/693a1f8c-9945-41fc-b11a-8e64998f3655" />
-
-<img width="1920" height="1080" alt="Screenshot 2026-07-15 202549" src="https://github.com/user-attachments/assets/d86b191a-ea80-424e-a88a-e079cd7b2e6f" />
-
-<img width="1920" height="1080" alt="Screenshot 2026-07-15 202633" src="https://github.com/user-attachments/assets/f6ebd5da-8f77-41a9-b4b9-460c8c6a76cd" />
-
-<img width="1920" height="1080" alt="Screenshot 2026-07-15 202652" src="https://github.com/user-attachments/assets/3406b6e3-935a-4747-8fa6-b485755f6718" />
-
-
-
-# 📚 Future Enhancements
-
-- PDF Upload Support
-- Voice-based Learning Assistant
-- Student Login System
-- Progress Tracking Dashboard
-- Multi-language Support
-- PDF Notes Generation
-- Performance Analytics
+<img width="1920" height="1080" alt="Quiz Generation" src="https://github.com/user-attachments/assets/693a1f8c-9945-41fc-b11a-8e64998f3655" />
 
 ---
 
+# 📚 Future Enhancements
+
+- LaMini-Flan-T5 complete integration.
+- PDF Upload Support.
+- Voice-based Learning Assistant.
+- Student Login System.
+- Progress Tracking Dashboard.
+- Multi-language Support.
+- PDF Notes Generation.
+- Performance Analytics.
+
+---
+
+# 🗂️ ER Diagram / System Representation
+
+EduGenie does not store user data in a database. The following representation shows the relationship between user input, AI requests, educational modules, Gemini API, and generated responses.
+
+```
+              +-------------+
+              |    USER     |
+              +-------------+
+              | input_text  |
+              +-------------+
+                    |
+                    v
+
+              +-------------+
+              | AI REQUEST  |
+              +-------------+
+              | module_type |
+              | user_input  |
+              +-------------+
+
+                    |
+ ------------------------------------------------
+ |          |          |          |              |
+ v          v          v          v              v
+
+Q&A   Explanation    Quiz     Summary     Learning
+Module   Module     Module    Module     Path Module
+
+
+                    |
+                    v
+
+             +-------------+
+             | GEMINI API  |
+             +-------------+
+             | AI Model    |
+             +-------------+
+
+                    |
+                    v
+
+             +-------------+
+             | AI RESPONSE |
+             +-------------+
+             | response    |
+             +-------------+
+```
+
+---
+
+# 👨‍💻 Author
+
+Project:
 # 👨‍💻 Author
 
 Submitted By:
@@ -289,76 +340,17 @@ Submitted By:
 Name: P Gayatri Satapathy 
 Roll number: 324506402513
 
-Name: Harshini Kalakodimi
-Roll Number: 324506402255
-
 Branch: B.Tech CSE
 College: Andhra University college of engineering 
 Academic Year: 2024-2028
 Technologies: Python | FastAPI | Google Gemini 1.5 Pro | LaMini-Flan-T5 | HTML | CSS | Jinja2
 Internship: **APSCHE Skill Wallet Internship**
 
-Project:
+
 **EduGenie – AI Powered Personalized Learning Assistant**
 
 ---
 
 # 📄 License
 
-This project was developed for educational purposes as part of the APSCHE Skill Wallet Internship Program.
-
-
----
-# 🗂️ ER Diagram / System Representation
-
-EduGenie does not store user data in a database. The following ER representation shows the relationship between users, AI requests, educational modules, Gemini API, and generated responses.
-
-            +----------------+
-            |     USER       |
-            +----------------+
-            | user_id        |
-            | input_text     |
-            +----------------+
-                   |
-                   |
-                   v
-
-            +----------------+
-            |  AI REQUEST    |
-            +----------------+
-            | request_id     |
-            | module_type    |
-            | user_input     |
-            +----------------+
-                   |
-      ---------------------------------
-      |        |        |       |      |
-      v        v        v       v      v
-
-   +------+ +-----------+ +------+ +---------+ +-------------+
-   | Q&A  | |Explanation| | Quiz | |Summary | | Learning    |
-   |Module| |  Module   | |Module| | Module | | Path Module |
-   +------+ +-----------+ +------+ +---------+ +-------------+
-
-                   |
-                   v
-
-          +----------------+
-          | GEMINI AI API  |
-          +----------------+
-          | AI Model       |
-          | Generated Data |
-          +----------------+
-
-                   |
-                   v
-
-          +----------------+
-          | AI RESPONSE    |
-          +----------------+
-          | response_text  |
-          +----------------+
-
-
-
----
+This project was developed for educational purposes as part of the **APSCHE Skill Wallet Internship Program**.
